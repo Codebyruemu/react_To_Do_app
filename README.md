@@ -6,12 +6,14 @@ A mini schedule application made with React.js.
 
 This is a simple and intuitive to-do list application built with React, designed to help you manage your daily tasks and schedule efficiently.
 
+## Knowledge gained
+deep understandinging of react state management, issues related to component rendering
+
 ## Features
 
-- Add, edit, and delete tasks
-- Mark tasks as complete
+- Add, move task to complete section, and remove tasks
 - Organize your tasks with a clean and user-friendly interface
-- Real-time updates
+- stalled task (previous day task) are auto removed
 
 ## Installation
 
@@ -35,13 +37,11 @@ npm install
 npm start
 ```
 
-The application will open in your browser at `http://localhost:3000`.
-
 ## Usage
 
 - **Add Task**: Enter your task in the input field and click "Add" or press Enter
 - **Complete Task**: Click the checkbox next to a task to mark it as complete
-- **Delete Task**: Click the delete button to remove a task
+- **Delete Task**: Click the remove button to remove a task
 
 ## Technologies Used
 
@@ -49,9 +49,6 @@ The application will open in your browser at `http://localhost:3000`.
 - JavaScript
 - CSS
 
-## License
-
-This project is open source and available under the MIT License.
 
 ## Author
 
