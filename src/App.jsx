@@ -8,7 +8,8 @@ function App() {
 
   return (
     <>
-    <Router>
+    {/* basename was useful for github deployment */}
+    <Router basename="/react_To_Do_app/">
       <ContexProvider>
         <Navbar />
         <Routes >
