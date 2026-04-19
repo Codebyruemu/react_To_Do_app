@@ -1,10 +1,8 @@
 import {BrowserRouter as Router,Routes, Route,} from "react-router-dom"
 import Navbar from "./components/Navbar"
-import Home from "./components/pages/Home"
-import Login from "./components/Login"
 import ContexProvider from "./context/ContexProvider"
-import Lists from "./components/Lists"
 import Todo from "./components/pages/Todo"
+import Footer from "./components/footer"
 
 function App() {
 
@@ -14,10 +12,9 @@ function App() {
       <ContexProvider>
         <Navbar />
         <Routes >
-          <Route path="/" element={<Home />}/>
-          <Route path="/login" element={<Login />} />
-          <Route path="/list" element={<Todo /> } />
+          <Route path="/" element={<Todo /> } />
         </Routes>
+        <Footer />
       </ContexProvider>
       
     </Router>

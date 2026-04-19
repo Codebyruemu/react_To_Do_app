@@ -70,7 +70,7 @@ const Todo = () => {
     
     
   return (
-    <div className="pt-10 w-full md:w-5/6 mx-auto">
+    <div className="pt-10 w-full md:w-5/6 mx-auto flex-1">
         <h3 className="text-center mb-6 text-green-800 text-2xl">MY To-Do</h3>
         <div className="bg-white p-2 md:p-6 rounded-2xl">
             
