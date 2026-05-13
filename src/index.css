@@ -41,3 +41,26 @@ body{
   display: flex;
   flex-direction: column;
 }
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px 16px;
+
+  border-radius: 10px;
+
+  color: #374151;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #2563eb;
+  color: white;
+}

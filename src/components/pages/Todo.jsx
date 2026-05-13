@@ -24,6 +24,7 @@ const Todo = () => {
         const storedDate = localStorage.getItem('toDoDate')
 
         if (storedDate && storedDate !== today) {
+            // remove yesterday record and also keep the todo and completeTask state data fresh
             localStorage.removeItem('todo')
             localStorage.removeItem('completeTask')
             localStorage.setItem('toDoDate', today)
@@ -62,9 +63,12 @@ const Todo = () => {
         }
     
     const taskComplete = (id) =>{
+            //find returns the item obj (key value pair) that matches that id 
             let item = todo.find((item) => item.id === id)
             console.log(item)
+            //add that obj to completeTask
             setCompleteTask((prev)=>[...prev, item])
+            //pass that id to removeItem
             removeItem(id)
     }
     

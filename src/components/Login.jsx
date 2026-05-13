@@ -12,16 +12,19 @@ const Login = () => {
 
     //take in the event and assign the event.target attribute to name and value in a distructred manner
     const handleChange = (event)=>{
+        setError(false)
         const {name,value} = event.target
         setFormData((prev)=>({...prev,[name]:value}))
     }
 
     const handleSubmit =(e)=>{
         e.preventDefault()
+        
         let promise = new Promise((resolve,reject)=>{
             let success = login(formData.username,formData.password)
             if (success){
                 resolve()
+            
             }else{
                 reject(new Error('invalid credentials'));
                 
@@ -29,11 +32,12 @@ const Login = () => {
         })
         promise
         .then(()=>{
+            setError(false)
             setTimeout(()=>{
                 navigate("/")
         },2000)
         })
-        .catch(error =>{
+        .catch((error) =>{
             setError(true)
             console.error(error)})  
     }

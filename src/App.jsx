@@ -1,8 +1,11 @@
 import {BrowserRouter as Router,Routes, Route,} from "react-router-dom"
-import Navbar from "./components/Navbar"
 import ContexProvider from "./context/ContexProvider"
 import Todo from "./components/pages/Todo"
 import Footer from "./components/footer"
+import Mainlayout from "./components/Mainlayout"
+import DashboardLayoaut from "./components/DashboardLayoaut"
+import Dashboard from "./components/Dashboard"
+import Login from "./components/Login"
 
 function App() {
 
@@ -11,11 +14,17 @@ function App() {
     {/* basename was useful for github deployment */}
     <Router>
       <ContexProvider>
-        <Navbar />
         <Routes >
-          <Route path="/" element={<Todo /> } />
+          <Route element={<Mainlayout />} >
+              <Route path="/" element={<Todo /> } />
+              <Route path="/login" element={<Login /> } />
+
+          </Route>
+
+          <Route element={<DashboardLayoaut />} >
+              <Route path="/dashboard" element={<Dashboard /> } />
+          </Route>
         </Routes>
-        <Footer />
       </ContexProvider>
       
     </Router>
